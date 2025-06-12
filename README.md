@@ -37,8 +37,9 @@ them in a list box.
 
 ## Internet Blocking
 The controller uses the exported `AddFirewallBlockRule` function to add a
-firewall rule for the selected executable. The rule is created via the Windows
-`netsh` command line tool and blocks all outbound traffic for that process.
+firewall rule for the selected executable. The executable path is retrieved via
+the Windows `QueryFullProcessImageName` API to avoid access issues, then a rule
+is created using `netsh` to block all outbound traffic for that process.
 
 ## Test App
 

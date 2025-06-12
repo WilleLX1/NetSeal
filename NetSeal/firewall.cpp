@@ -2,13 +2,14 @@
 #include <string>
 #include <windows.h>
 #include <wchar.h>
+#include <cstdlib>
 
 // Ensure the exported symbol uses C linkage to match the header
 extern "C" {
 
 // Adds a Windows Firewall rule to block outbound traffic for the
 // specified executable path. Returns TRUE on success.
-BOOL AddFirewallBlockRule(const wchar_t* exePath)
+BOOL WINAPI AddFirewallBlockRule(const wchar_t* exePath)
 {
     if (!exePath || wcslen(exePath) == 0)
         return FALSE;
