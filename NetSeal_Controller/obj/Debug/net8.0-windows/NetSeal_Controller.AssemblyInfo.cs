@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NetSeal_Controller")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+817065706ef7c2d56d0f22f741a4a58c8f31bd1d")]
 [assembly: System.Reflection.AssemblyProductAttribute("NetSeal_Controller")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NetSeal_Controller")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

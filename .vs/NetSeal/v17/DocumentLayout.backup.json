@@ -1,12 +1,52 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\projects\\_other\\NetSeal\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AB975ACC-F706-48D9-98F9-F12648E7A0AF}|NetSeal\\NetSeal.vcxproj|C:\\projects\\_other\\NetSeal\\NetSeal\\dllmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AB975ACC-F706-48D9-98F9-F12648E7A0AF}|NetSeal\\NetSeal.vcxproj|solutionrelative:NetSeal\\dllmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6F07ABB-712E-4BFE-B4C4-35253B8F7D05}|NetSeal_Controller\\NetSeal_Controller.csproj|C:\\projects\\_other\\NetSeal\\netseal_controller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A6F07ABB-712E-4BFE-B4C4-35253B8F7D05}|NetSeal_Controller\\NetSeal_Controller.csproj|solutionrelative:netseal_controller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 384,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dllmain.cpp",
+              "DocumentMoniker": "C:\\projects\\_other\\NetSeal\\NetSeal\\dllmain.cpp",
+              "RelativeDocumentMoniker": "NetSeal\\dllmain.cpp",
+              "ToolTip": "C:\\projects\\_other\\NetSeal\\NetSeal\\dllmain.cpp",
+              "RelativeToolTip": "NetSeal\\dllmain.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-11T22:02:58.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\projects\\_other\\NetSeal\\NetSeal_Controller\\Form1.cs",
+              "RelativeDocumentMoniker": "NetSeal_Controller\\Form1.cs",
+              "ToolTip": "C:\\projects\\_other\\NetSeal\\NetSeal_Controller\\Form1.cs [Design]",
+              "RelativeToolTip": "NetSeal_Controller\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T22:02:18.888Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
