@@ -1,16 +1,16 @@
 #include "pch.h"
 #include <string>
 #include <windows.h>
+#include <wchar.h>
 
 // Ensure the exported symbol uses C linkage to match the header
 extern "C" {
 
-// Adds a simple Windows Firewall rule to block outbound traffic for the
-// current process. Returns TRUE on success.
-BOOL AddFirewallBlockRule()
+// Adds a Windows Firewall rule to block outbound traffic for the
+// specified executable path. Returns TRUE on success.
+BOOL AddFirewallBlockRule(const wchar_t* exePath)
 {
-    wchar_t exePath[MAX_PATH];
-    if (!GetModuleFileNameW(NULL, exePath, MAX_PATH))
+    if (!exePath || wcslen(exePath) == 0)
         return FALSE;
 
     std::wstring command = L"netsh advfirewall firewall add rule name=\"NetSealBlock\" program=\"";

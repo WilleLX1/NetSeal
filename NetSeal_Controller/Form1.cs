@@ -5,6 +5,9 @@ namespace NetSeal_Controller
         [System.Runtime.InteropServices.DllImport("NetSeal.dll", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall, CharSet = System.Runtime.InteropServices.CharSet.Ansi)]
         private static extern bool InjectIntoProcess(uint processId, string dllPath);
 
+        [System.Runtime.InteropServices.DllImport("NetSeal.dll", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall, CharSet = System.Runtime.InteropServices.CharSet.Unicode)]
+        private static extern bool AddFirewallBlockRule(string exePath);
+
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +45,22 @@ namespace NetSeal_Controller
 
             var dllPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "NetSeal.dll");
             bool result = InjectIntoProcess(pid, dllPath);
-            MessageBox.Show(result ? "Injected" : "Injection failed");
+
+            bool firewall = false;
+            if (result)
+            {
+                try
+                {
+                    var proc = System.Diagnostics.Process.GetProcessById((int)pid);
+                    firewall = AddFirewallBlockRule(proc.MainModule.FileName);
+                }
+                catch
+                {
+                    firewall = false;
+                }
+            }
+
+            MessageBox.Show(result && firewall ? "Injected and blocked" : "Injection or firewall failed");
         }
     }
 }
