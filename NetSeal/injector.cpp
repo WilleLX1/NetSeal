@@ -2,7 +2,7 @@
 #include "injector.h"
 #include <string>
 
-BOOL InjectIntoProcess(DWORD processId, const char* dllPath)
+BOOL WINAPI InjectIntoProcess(DWORD processId, const char* dllPath)
 {
     HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, processId);
     if (!hProcess)

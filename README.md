@@ -32,13 +32,14 @@ them in a list box.
 2. The window shows all processes that are accessible to the user.
 3. Select a process and click **Inject**.
 4. The application calls `InjectIntoProcess`, loading `NetSeal.dll` into the
-   selected process. Once loaded, the DLL adds a firewall rule blocking that
-   process's outbound network traffic.
+   selected process. After a successful injection the controller creates a
+   firewall rule blocking that process's outbound network traffic.
 
 ## Internet Blocking
-When the DLL is loaded into a target process, it calls `AddFirewallBlockRule`.
-This function uses the Windows `netsh` command line tool to create a firewall
-rule that blocks all outbound traffic for the current process.
+The controller uses the exported `AddFirewallBlockRule` function to add a
+firewall rule for the selected executable. The executable path is retrieved via
+the Windows `QueryFullProcessImageName` API to avoid access issues, then a rule
+is created using `netsh` to block all outbound traffic for that process.
 
 ## Test App
 
