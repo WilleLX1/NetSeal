@@ -42,6 +42,15 @@
     <ClInclude Include="minhook/hde64.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="minhook/table32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook/table64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook/pstdint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="minhook/trampoline.h">
       <Filter>Header Files</Filter>
     </ClInclude>

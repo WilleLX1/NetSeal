@@ -148,6 +148,9 @@
     <ClInclude Include="minhook/buffer.h" />
     <ClInclude Include="minhook/hde32.h" />
     <ClInclude Include="minhook/hde64.h" />
+    <ClInclude Include="minhook/table32.h" />
+    <ClInclude Include="minhook/table64.h" />
+    <ClInclude Include="minhook/pstdint.h" />
     <ClInclude Include="minhook/trampoline.h" />
   </ItemGroup>
   <ItemGroup>
