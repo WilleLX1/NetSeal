@@ -28,12 +28,14 @@
         /// </summary>
         private System.Windows.Forms.ListBox listBoxProcesses;
         private System.Windows.Forms.Button buttonInject;
+        private System.Windows.Forms.Button buttonReset;
 
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this.listBoxProcesses = new System.Windows.Forms.ListBox();
             this.buttonInject = new System.Windows.Forms.Button();
+            this.buttonReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
 
             // listBoxProcesses
@@ -51,10 +53,19 @@
             this.buttonInject.UseVisualStyleBackColor = true;
             this.buttonInject.Click += new System.EventHandler(this.buttonInject_Click);
 
+            // buttonReset
+            this.buttonReset.Location = new System.Drawing.Point(12, 411);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(360, 23);
+            this.buttonReset.Text = "Reset Firewall";
+            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+
             // Form1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 417);
+            this.ClientSize = new System.Drawing.Size(384, 446);
             this.Controls.Add(this.buttonInject);
+            this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.listBoxProcesses);
             this.Name = "Form1";
             this.Text = "NetSeal Controller";

@@ -22,4 +22,18 @@ BOOL WINAPI AddFirewallBlockRule(const wchar_t* exePath)
     int result = _wsystem(command.c_str());
     return result == 0;
 }
+
+// Removes the firewall rule for the specified executable.
+BOOL WINAPI RemoveFirewallBlockRule(const wchar_t* exePath)
+{
+    if (!exePath || wcslen(exePath) == 0)
+        return FALSE;
+
+    std::wstring command = L"netsh advfirewall firewall delete rule name=\"NetSealBlock\" program=\"";
+    command += exePath;
+    command += L"\"";
+
+    int result = _wsystem(command.c_str());
+    return result == 0;
+}
 }

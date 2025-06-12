@@ -8,6 +8,9 @@ namespace NetSeal_Controller
         [System.Runtime.InteropServices.DllImport("NetSeal.dll", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall, CharSet = System.Runtime.InteropServices.CharSet.Unicode)]
         private static extern bool AddFirewallBlockRule(string exePath);
 
+        [System.Runtime.InteropServices.DllImport("NetSeal.dll", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall, CharSet = System.Runtime.InteropServices.CharSet.Unicode)]
+        private static extern bool RemoveFirewallBlockRule(string exePath);
+
         [System.Runtime.InteropServices.DllImport("kernel32.dll", SetLastError = true, CharSet = System.Runtime.InteropServices.CharSet.Unicode)]
         private static extern bool QueryFullProcessImageName(IntPtr hProcess, int flags, System.Text.StringBuilder text, ref int size);
 
@@ -96,6 +99,28 @@ namespace NetSeal_Controller
             }
 
             MessageBox.Show(result && firewall ? "Injected and blocked" : "Injection or firewall failed");
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            if (listBoxProcesses.SelectedItem == null)
+                return;
+
+            var text = listBoxProcesses.SelectedItem.ToString();
+            var pidStart = text.LastIndexOf('(');
+            var pidEnd = text.LastIndexOf(')');
+            if (pidStart == -1 || pidEnd == -1)
+                return;
+
+            if (!uint.TryParse(text.Substring(pidStart + 1, pidEnd - pidStart - 1), out uint pid))
+                return;
+
+            var path = GetProcessPath(pid);
+            if (!string.IsNullOrEmpty(path))
+            {
+                bool removed = RemoveFirewallBlockRule(path);
+                MessageBox.Show(removed ? "Firewall rule removed" : "Failed to remove rule");
+            }
         }
     }
 }
