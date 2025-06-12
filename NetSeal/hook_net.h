@@ -1,11 +1,11 @@
 #pragma once
 #include <windows.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-__declspec(dllexport) BOOL AddFirewallBlockRule();
+BOOL WINAPI InitializeHooks();
+void WINAPI UninitializeHooks();
 
 #ifdef __cplusplus
 }

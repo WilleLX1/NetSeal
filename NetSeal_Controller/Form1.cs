@@ -44,5 +44,6 @@ namespace NetSeal_Controller
             bool result = InjectIntoProcess(pid, dllPath);
             MessageBox.Show(result ? "Injected" : "Injection failed");
         }
+
     }
 }

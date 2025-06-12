@@ -53,7 +53,7 @@
 
             // Form1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 417);
+            this.ClientSize = new System.Drawing.Size(384, 416);
             this.Controls.Add(this.buttonInject);
             this.Controls.Add(this.listBoxProcesses);
             this.Name = "Form1";

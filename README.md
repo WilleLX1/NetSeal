@@ -16,8 +16,8 @@ dotnet build NetSeal_Controller/NetSeal_Controller.csproj -c Release
 msbuild NetSeal/NetSeal.vcxproj -p:Configuration=Release
 ```
 
-Administrator privileges may be required when running the controller because
-the injected DLL modifies the Windows Firewall.
+Administrator privileges are only required if the target process runs with
+elevated permissions.
 
 ## DLL Injection
 The C++ project exposes a function `InjectIntoProcess` that uses
@@ -32,13 +32,13 @@ them in a list box.
 2. The window shows all processes that are accessible to the user.
 3. Select a process and click **Inject**.
 4. The application calls `InjectIntoProcess`, loading `NetSeal.dll` into the
-   selected process. Once loaded, the DLL adds a firewall rule blocking that
-   process's outbound network traffic.
+   selected process. The injected DLL hooks network APIs to block outbound
+   connections.
 
 ## Internet Blocking
-When the DLL is loaded into a target process, it calls `AddFirewallBlockRule`.
-This function uses the Windows `netsh` command line tool to create a firewall
-rule that blocks all outbound traffic for the current process.
+The DLL hooks the Winsock `connect` function using the bundled **MinHook**
+library. Any connection attempts from the target process fail, preventing
+outbound traffic without modifying firewall rules.
 
 ## Test App
 

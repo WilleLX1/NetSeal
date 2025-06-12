@@ -142,12 +142,35 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="injector.h" />
-    <ClInclude Include="firewall.h" />
+    <ClInclude Include="hook_net.h" />
+    <ClInclude Include="minhook/MinHook.h" />
+    <ClInclude Include="minhook/buffer.h" />
+    <ClInclude Include="minhook/hde32.h" />
+    <ClInclude Include="minhook/hde64.h" />
+    <ClInclude Include="minhook/table32.h" />
+    <ClInclude Include="minhook/table64.h" />
+    <ClInclude Include="minhook/pstdint.h" />
+    <ClInclude Include="minhook/trampoline.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="injector.cpp" />
-    <ClCompile Include="firewall.cpp" />
+    <ClCompile Include="hook_net.cpp" />
+    <ClCompile Include="minhook/buffer.c">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="minhook/hde32.c">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="minhook/hde64.c">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="minhook/hook.c">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="minhook/trampoline.c">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
