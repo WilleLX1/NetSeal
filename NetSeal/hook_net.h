@@ -1,11 +1,11 @@
 #pragma once
 #include <windows.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-__declspec(dllexport) BOOL WINAPI InjectIntoProcess(DWORD processId, const char* dllPath);
+BOOL WINAPI InitializeHooks();
+void WINAPI UninitializeHooks();
 
 #ifdef __cplusplus
 }
