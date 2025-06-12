@@ -36,9 +36,11 @@ them in a list box.
    connections.
 
 ## Internet Blocking
-The DLL hooks the Winsock `connect` function using the bundled **MinHook**
-library. Any connection attempts from the target process fail, preventing
-outbound traffic without modifying firewall rules.
+The DLL hooks several networking functions using the bundled **MinHook**
+library. In addition to the Winsock `connect` function, `IcmpSendEcho` and
+`IcmpSendEcho2` from **iphlpapi.dll** are intercepted. Any connection or ICMP
+echo request from the target process fails, preventing outbound traffic without
+modifying firewall rules.
 
 ## Test App
 
