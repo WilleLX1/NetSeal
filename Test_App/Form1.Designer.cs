@@ -54,7 +54,7 @@
 
             // timerPing
             this.timerPing.Interval = 1000;
-            this.timerPing.Tick += new System.EventHandler(this.timerPing_Tick);
+            this.timerPing.Tick += new System.EventHandler(this.OnTimerPingTick);
 
             // Form1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
