@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{AB975ACC-F706-48D9-98F9-F12648E7A0AF}|NetSeal\\NetSeal.vcxproj|solutionrelative:NetSeal\\dllmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6F07ABB-712E-4BFE-B4C4-35253B8F7D05}|NetSeal_Controller\\NetSeal_Controller.csproj|C:\\projects\\_other\\NetSeal\\netseal_controller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A6F07ABB-712E-4BFE-B4C4-35253B8F7D05}|NetSeal_Controller\\NetSeal_Controller.csproj|c:\\projects\\_other\\netseal\\netseal_controller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A6F07ABB-712E-4BFE-B4C4-35253B8F7D05}|NetSeal_Controller\\NetSeal_Controller.csproj|solutionrelative:netseal_controller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -42,7 +42,8 @@
               "ToolTip": "C:\\projects\\_other\\NetSeal\\NetSeal_Controller\\Form1.cs [Design]",
               "RelativeToolTip": "NetSeal_Controller\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T22:02:18.888Z"
+              "WhenOpened": "2025-06-11T22:02:18.888Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
