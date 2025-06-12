@@ -39,3 +39,17 @@ them in a list box.
 When the DLL is loaded into a target process, it calls `AddFirewallBlockRule`.
 This function uses the Windows `netsh` command line tool to create a firewall
 rule that blocks all outbound traffic for the current process.
+
+## Test App
+
+The repository also includes a simple WinForms application under `Test_App`.
+When started, the app automatically begins pinging `google.com` once per
+second and displays each response in a log along with running statistics. This
+application is useful to demonstrate that injecting `NetSeal.dll` blocks the
+network requests.
+
+Build the test app with:
+
+```bash
+dotnet build Test_App/Test_App.csproj -c Release
+```
