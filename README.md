@@ -43,9 +43,10 @@ rule that blocks all outbound traffic for the current process.
 ## Test App
 
 The repository also includes a simple WinForms application under `Test_App`.
-When run, the window continuously pings `google.com` and displays the round-trip
-time along with basic statistics. Injecting `NetSeal.dll` into this process will
-demonstrate that the network requests are blocked.
+When started, the app automatically begins pinging `google.com` once per
+second and displays each response in a log along with running statistics. This
+application is useful to demonstrate that injecting `NetSeal.dll` blocks the
+network requests.
 
 Build the test app with:
 
