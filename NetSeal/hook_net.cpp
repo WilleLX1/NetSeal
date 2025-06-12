@@ -4,6 +4,8 @@
 #include "minhook/MinHook.h"
 #include <winsock2.h>
 #include <iphlpapi.h>
+#include <icmpapi.h>
+#include <winternl.h>
 
 #pragma comment(lib, "iphlpapi.lib")
 
